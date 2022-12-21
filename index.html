@@ -130,6 +130,7 @@
          let x = document.getElementById("result").value;
          try {
             let y = parser.evaluate(x);
+            if (y == 'Infinity') throw error;
             document.getElementById("result").value = y;
          }
 
