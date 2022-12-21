@@ -9,7 +9,7 @@
       integrity="sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<style>
+   <style>
       table {
          border: 1px solid black;
          margin-left: auto;
@@ -98,6 +98,8 @@
       const parser = math.parser()
       parser.evaluate('pdecimal(x) = format(x - floor(x), { precision: 8 })');
       parser.evaluate('pentera(x) = floor(x)');
+
+      document.onkeydown = function (e) { return false; }
 
       function dis(val) {
          document.getElementById("result").value += val
